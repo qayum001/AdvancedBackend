@@ -1,6 +1,14 @@
 ﻿namespace Backend.Models
 {
-    public class Category
+    public enum Category
     {
+        WOK,
+        Vegan,
+        Soup,
+        Pizza,
+        Shaverma,
+        Burger,
+        Desert,
+        Drink,
     }
 }
