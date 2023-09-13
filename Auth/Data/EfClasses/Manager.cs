@@ -11,7 +11,7 @@ namespace Auth.Data.EfClasses
             string phone,
             string email,
             string password)
-            : base(Guid.NewGuid(), fullName, birthDate, gender, phone, email, password, new Role("Manager"))
+            : base(Guid.NewGuid(), fullName, birthDate, gender, phone, email, password, new Role(nameof(Manager)))
         {
         }
     }

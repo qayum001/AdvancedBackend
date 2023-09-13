@@ -49,7 +49,7 @@ namespace Auth.Controllers
         {
             var accessToken = await HttpContext.GetTokenAsync("access_token");
 
-            if (accessToken == null) return BadRequest("Token is not found");
+            if (accessToken == null) return BadRequest("Access token is not found");
 
             var tokenResponse = await _authService.Refresh(accessToken, refreshToken);
 

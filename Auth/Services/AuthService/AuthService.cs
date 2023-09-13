@@ -24,7 +24,7 @@ namespace Auth.Services.AuthService
 
         public async Task<AuthenticateResponse> Login(LoginCredentials loginCredentials)
         {
-            var userResponse = await _userService.GetUserByCredentials(loginCredentials);
+            var userResponse = await _userService.GetUserResponseByCredentials(loginCredentials);
 
             if (userResponse.User == null) return new AuthenticateResponse(Status.Fail, userResponse.Message);
 
@@ -44,7 +44,7 @@ namespace Auth.Services.AuthService
         {
             var userId = await _tokenService.GetUserIdByToken(accessToken);
             
-            var userResponse = await _userService.GetUserById(userId);
+            var userResponse = await _userService.GetUserResponseById(userId);
 
             if (userResponse.Status == Status.Fail || userResponse.User == null)
                 return new TokenResponse(Status.Fail, userResponse.Message);
@@ -65,7 +65,7 @@ namespace Auth.Services.AuthService
         {
             var id = await _tokenService.GetUserIdByToken(token);
 
-            var userResponse = await _userService.GetUserById(id);
+            var userResponse = await _userService.GetUserResponseById(id);
 
             if (userResponse.User == null) return new Response(Status.Fail, userResponse.Message);
 
@@ -78,7 +78,7 @@ namespace Auth.Services.AuthService
 
         public async Task<Response> Register(RegisterDto registerDto)
         {
-            var userResponse = await _userService.GetUserByCredentials(new LoginCredentials(registerDto.Email, registerDto.Password));
+            var userResponse = await _userService.GetUserResponseByCredentials(new LoginCredentials(registerDto.Email, registerDto.Password));
 
             if (userResponse.Status == Status.Success) return new Response(Status.Fail, "This email is not available");
 

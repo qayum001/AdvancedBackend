@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.WebApi", "Backend\B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C1B35F8-81F2-4D61-AFEE-66F5E57922A7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Atuh", "Atuh", "{81888386-8471-49F8-B8AD-97295F3E1BFD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{81888386-8471-49F8-B8AD-97295F3E1BFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{981E1559-BD65-4E14-9409-527A809B11DA}"
 EndProject
@@ -21,17 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notification", "Notificatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin Panel", "Admin Panel", "{57062D5C-7D4E-424C-AEBD-4D346621210F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Domain", "Backend.Domain\Backend.Domain.csproj", "{76040F6F-35C3-4FD0-905C-B25C6C1C667A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Domain", "Backend.Domain\Backend.Domain.csproj", "{76040F6F-35C3-4FD0-905C-B25C6C1C667A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Application", "Backend.Application\Backend.Application.csproj", "{5747AC14-7C6A-4E6C-80D7-B59DE6F56A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Application", "Backend.Application\Backend.Application.csproj", "{5747AC14-7C6A-4E6C-80D7-B59DE6F56A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Infrastructure", "Backend.Infrastructure\Backend.Infrastructure.csproj", "{B2636D94-6AB8-48F8-8BA8-B64CCCE08295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Infrastructure", "Backend.Infrastructure\Backend.Infrastructure.csproj", "{B2636D94-6AB8-48F8-8BA8-B64CCCE08295}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{866CA5BF-5446-4702-BE90-27CABFFF12CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7E798840-98D7-4DBC-8F4E-31A396378234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Persistence", "Backend.Persistence\Backend.Persistence.csproj", "{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Persistence", "Backend.Persistence\Backend.Persistence.csproj", "{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{211C7198-8B53-416F-8459-5343FEA8CEFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Shared", "Shared\Backend.Shared.csproj", "{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +98,8 @@ Global
 		{866CA5BF-5446-4702-BE90-27CABFFF12CA} = {981E1559-BD65-4E14-9409-527A809B11DA}
 		{7E798840-98D7-4DBC-8F4E-31A396378234} = {981E1559-BD65-4E14-9409-527A809B11DA}
 		{BEF3DBA0-AFD8-4C4D-8D8E-487BCCBC2B7E} = {7E798840-98D7-4DBC-8F4E-31A396378234}
+		{211C7198-8B53-416F-8459-5343FEA8CEFF} = {981E1559-BD65-4E14-9409-527A809B11DA}
+		{14E6FE7D-3CE7-455E-A8AC-5EAAC36207A4} = {211C7198-8B53-416F-8459-5343FEA8CEFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED3EC448-7F11-4F8D-A014-9ABF4E2B4931}

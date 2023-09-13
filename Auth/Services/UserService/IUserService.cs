@@ -5,8 +5,10 @@ namespace Auth.Services.UserService
 {
     public interface IUserService
     {
-        Task<UserResponse> GetUserByCredentials(LoginCredentials credentials);
-        Task<UserResponse> GetUserById(Guid id);
-        //Edit, Delete
+        Task<UserResponse> GetUserResponseByCredentials(LoginCredentials credentials);
+        Task<UserResponse> GetUserResponseById(Guid id);
+        Task<UserResponse> GetUserResponseByToken(string token);
+        Task<UserDto> GetUserDtoById(Guid id);
+        Task<UserDto> GetUserDtoByToken(string token);
     }
 }

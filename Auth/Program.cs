@@ -6,13 +6,12 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
 using System.Reflection;
 using System.Text;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
+using Auth.Services.AccauntService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,6 +55,9 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddFluentValidationRulesToSwagger();
 
+//Auto mapper
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 //Jwt baerer
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -80,6 +82,7 @@ builder.Services.AddDbContext<AuthDbContext>(option => option.UseSqlServer(conne
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 var app = builder.Build();
 

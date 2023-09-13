@@ -6,6 +6,7 @@ namespace Auth.Data.EfClasses
 {
     public class Customer : User
     {
+        //address might has own class with properties as city, street, home etc
         public string Address { get; private set; }
 
         public Customer(string fullName,
@@ -15,7 +16,7 @@ namespace Auth.Data.EfClasses
             string email,
             string address,
             string password)
-            : base(Guid.NewGuid(), fullName, birthDate, gender, phone, email, password, new Role("Customer"))
+            : base(Guid.NewGuid(), fullName, birthDate, gender, phone, email, password, new Role(nameof(Customer)))
         {
             Address = address; 
         }
